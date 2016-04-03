@@ -1,0 +1,25 @@
+<resources>
+
+    <string name="app_name">RappiTest</string>
+
+    <!-- Messages (General Purpose) -->
+
+    <string name="error_connectivity"> You\'re on offline mode: check Wifi / Data ports </string>
+    <string name="error_timeout">The server doesn\'t answer straight away. Try later again.</string>
+    <string name="error_webservice">There was an issue with the server. Try later again.</string>
+    <string name="loading_wait">Wait &#8230;</string>
+
+    <!-- Splash -->
+
+    <string name="splash_description">ITunes Apps</string>
+
+    <!-- Catalog -->
+
+    <string name="catalog_title">Apps Catalog</string>
+    <string name="catalog_no_items">There are no data to show</string>
+
+    <!-- Catalog Detail -->
+
+    <string name="catalog_detail_title">App Detail</string>
+
+</resources>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="org.jacr.itunesapps.controllers.catalog.CatalogDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:id="@+id/catalog_detail_layout_header"
+            style="@style/AppTheme.Catalog.Details.Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/screen_margin"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/catalog_detail_toolbar"
+                style="@style/AppTheme.Toolbar.Transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/catalog_detail_header_imageview"
+                    style="@style/AppTheme.Catalog.Details.HeaderImage"
+                    android:layout_gravity="center_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/catalog_detail_header_textview_title"
+                        style="@style/AppTheme.Catalog.Details.HeaderTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/catalog_detail_header_textview_subtitle"
+                        style="@style/AppTheme.Catalog.Details.HeaderSubTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- -->
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--  CONTENT -->
+    <!--
+    This scroll is focused for devices which its screen density doesnt reach to show
+    all the information on the viewport. NestedScrollView is required in order to work with
+    CoordinatorLayout
+    -->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/screen_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- RelativeLayout has issues with Scrollview. A solution is that we apply the approach:
+         scrollview - linearlayout - relativelayout
+         http://stackoverflow.com/questions/14210508/how-to-make-a-relative-layout-scrollable-when-it-has-many-children-views
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/catalog_detail_layout_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/catalog_detail_textview_title_description"
+                    style="@style/AppTheme.Catalog.Details.Text.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/catalog_detail_textview_description"
+                    style="@style/AppTheme.Catalog.Details.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/catalog_detail_textview_title_description" />
+
+                <TextView
+                    android:id="@+id/catalog_detail_textview_title_price"
+                    style="@style/AppTheme.Catalog.Details.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/catalog_detail_textview_description" />
+
+                <TextView
+                    android:id="@+id/catalog_detail_textview_price"
+                    style="@style/AppTheme.Catalog.Details.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/catalog_detail_textview_title_price"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/catalog_detail_textview_title_price"
+                    android:layout_toRightOf="@+id/catalog_detail_textview_title_price" />
+
+                <TextView
+                    android:id="@+id/catalog_detail_textview_title_category"
+                    style="@style/AppTheme.Catalog.Details.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/catalog_detail_textview_title_price" />
+
+                <TextView
+                    android:id="@+id/catalog_detail_textview_category"
+                    style="@style/AppTheme.Catalog.Details.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/catalog_detail_textview_title_category"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/catalog_detail_textview_title_category"
+                    android:layout_toRightOf="@+id/catalog_detail_textview_title_category" />
+
+                <TextView
+                    android:id="@+id/catalog_detail_textview_title_release_date"
+                    style="@style/AppTheme.Catalog.Details.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/catalog_detail_textview_title_category" />
+
+                <TextView
+                    android:id="@+id/catalog_detail_textview_release_date"
+                    style="@style/AppTheme.Catalog.Details.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/catalog_detail_textview_title_release_date"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/catalog_detail_textview_title_release_date"
+                    android:layout_toRightOf="@+id/catalog_detail_textview_title_release_date" />
+
+                <TextView
+                    android:id="@+id/catalog_detail_textview_rights"
+                    style="@style/AppTheme.Catalog.Details.Text.Rights"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/catalog_detail_textview_title_release_date"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!-- -->
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Screens >= 600dp of available width. This would include 7" tablet on Portrait Mode -->
+
+    <!-- Catalog -->
+    <dimen name="app_catalog_item_image_width">100dp</dimen>
+    <dimen name="app_catalog_item_image_height">100dp</dimen>
+
+    <!-- Catalog Details -->
+    <dimen name="app_catalog_item_details_image_width">150dp</dimen>
+    <dimen name="app_catalog_item_details_image_height">150dp</dimen>
+
+</resources>
