@@ -199,7 +199,7 @@ public class CatalogActivity extends AppCompatActivity
                 holdCategoriesInfo(categories);
                 List<CatalogItemData> items = new ArrayList<>();
                 for (String category : categories) {
-                    items.add(new CatalogItemData(category, "", ""));
+                    items.add(new CatalogItemData(category));
                 }
                 displayDataOnGrid(items);
             }
